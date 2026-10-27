@@ -1,0 +1,30 @@
+{
+  "name": "metro-rush",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": { "node": "24.x" },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "audit:assets": "node scripts/audit-release.mjs",
+    "verify": "npm run audit:assets && npm test && npm run build"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "three": "^0.169.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@types/three": "^0.169.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "playwright-core": "^1.64.1",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.0",
+    "vitest": "^2.1.9"
+  }
+}

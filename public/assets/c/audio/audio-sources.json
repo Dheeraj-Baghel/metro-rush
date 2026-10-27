@@ -1,0 +1,209 @@
+{
+  "step0": {
+    "source": "metro-rush-assets/assets/audio/kenney-impact-sounds/Audio/footstep_concrete_000.ogg",
+    "startSec": 0,
+    "durSec": 0.103,
+    "sampleRate": 44100,
+    "channels": 1,
+    "loop": false,
+    "seamRatio": null
+  },
+  "step1": {
+    "source": "metro-rush-assets/assets/audio/kenney-impact-sounds/Audio/footstep_concrete_001.ogg",
+    "startSec": 0,
+    "durSec": 0.105,
+    "sampleRate": 44100,
+    "channels": 1,
+    "loop": false,
+    "seamRatio": null
+  },
+  "step2": {
+    "source": "metro-rush-assets/assets/audio/kenney-impact-sounds/Audio/footstep_concrete_003.ogg",
+    "startSec": 0,
+    "durSec": 0.108,
+    "sampleRate": 44100,
+    "channels": 1,
+    "loop": false,
+    "seamRatio": null
+  },
+  "step3": {
+    "source": "metro-rush-assets/assets/audio/kenney-impact-sounds/Audio/footstep_concrete_004.ogg",
+    "startSec": 0,
+    "durSec": 0.111,
+    "sampleRate": 44100,
+    "channels": 1,
+    "loop": false,
+    "seamRatio": null
+  },
+  "jump": {
+    "source": "asset-inbox/cand/rpg/cloth1.ogg",
+    "startSec": 0.06,
+    "durSec": 0.42,
+    "sampleRate": 44100,
+    "channels": 1,
+    "loop": false,
+    "seamRatio": null
+  },
+  "land": {
+    "source": "metro-rush-assets/assets/audio/kenney-impact-sounds/Audio/impactSoft_medium_001.ogg",
+    "startSec": 0,
+    "durSec": 0.18,
+    "sampleRate": 44100,
+    "channels": 1,
+    "loop": false,
+    "seamRatio": null
+  },
+  "slide": {
+    "source": "asset-inbox/cand/rpg/cloth3.ogg",
+    "startSec": 0.04,
+    "durSec": 0.42,
+    "sampleRate": 44100,
+    "channels": 1,
+    "loop": false,
+    "seamRatio": null
+  },
+  "lane": {
+    "source": "asset-inbox/bsb/whoosh-3-s1795.ogg",
+    "startSec": 0.26,
+    "durSec": 0.38,
+    "sampleRate": 44100,
+    "channels": 1,
+    "loop": false,
+    "seamRatio": null
+  },
+  "coin": {
+    "source": "metro-rush-assets/assets/audio/kenney-digital-audio/Audio/highUp.ogg",
+    "startSec": 0.13,
+    "durSec": 0.32,
+    "sampleRate": 44100,
+    "channels": 1,
+    "loop": false,
+    "seamRatio": null
+  },
+  "powerup": {
+    "source": "metro-rush-assets/assets/audio/kenney-digital-audio/Audio/powerUp3.ogg",
+    "startSec": 0.12,
+    "durSec": 0.9,
+    "sampleRate": 44100,
+    "channels": 1,
+    "loop": false,
+    "seamRatio": null
+  },
+  "activate": {
+    "source": "metro-rush-assets/assets/audio/kenney-interface-sounds/Audio/confirmation_003.ogg",
+    "startSec": 0,
+    "durSec": 0.322,
+    "sampleRate": 44100,
+    "channels": 1,
+    "loop": false,
+    "seamRatio": null
+  },
+  "trainPass": {
+    "source": "asset-inbox/bsb/passage-of-a-train-6-s3416.ogg",
+    "startSec": 7.4,
+    "durSec": 6.6,
+    "sampleRate": 44100,
+    "channels": 1,
+    "loop": false,
+    "seamRatio": null
+  },
+  "trainHorn": {
+    "source": "asset-inbox/bsb/train-horn-2-s2846.ogg",
+    "startSec": 0.03,
+    "durSec": 1.7,
+    "sampleRate": 44100,
+    "channels": 1,
+    "loop": false,
+    "seamRatio": null
+  },
+  "crash": {
+    "source": "metro-rush-assets/assets/audio/kenney-impact-sounds/Audio/impactPunch_heavy_001.ogg",
+    "startSec": 0.01,
+    "durSec": 0.526,
+    "sampleRate": 44100,
+    "channels": 1,
+    "loop": false,
+    "seamRatio": null
+  },
+  "crashMetal": {
+    "source": "metro-rush-assets/assets/audio/kenney-impact-sounds/Audio/impactPlate_heavy_001.ogg",
+    "startSec": 0,
+    "durSec": 0.349,
+    "sampleRate": 44100,
+    "channels": 1,
+    "loop": false,
+    "seamRatio": null
+  },
+  "click": {
+    "source": "metro-rush-assets/assets/audio/kenney-interface-sounds/Audio/select_002.ogg",
+    "startSec": 0,
+    "durSec": 0.04,
+    "sampleRate": 44100,
+    "channels": 1,
+    "loop": false,
+    "seamRatio": null
+  },
+  "back": {
+    "source": "metro-rush-assets/assets/audio/kenney-interface-sounds/Audio/back_001.ogg",
+    "startSec": 0,
+    "durSec": 0.061,
+    "sampleRate": 44100,
+    "channels": 1,
+    "loop": false,
+    "seamRatio": null
+  },
+  "countTick": {
+    "source": "metro-rush-assets/assets/audio/kenney-interface-sounds/Audio/tick_002.ogg",
+    "startSec": 0,
+    "durSec": 0.02,
+    "sampleRate": 44100,
+    "channels": 1,
+    "loop": false,
+    "seamRatio": null
+  },
+  "countGo": {
+    "source": "metro-rush-assets/assets/audio/kenney-interface-sounds/Audio/confirmation_001.ogg",
+    "startSec": 0,
+    "durSec": 0.29,
+    "sampleRate": 44100,
+    "channels": 1,
+    "loop": false,
+    "seamRatio": null
+  },
+  "gameOver": {
+    "source": "asset-inbox/cand/jingles/jingles_NES13.ogg",
+    "startSec": 0,
+    "durSec": 1.048,
+    "sampleRate": 44100,
+    "channels": 2,
+    "loop": false,
+    "seamRatio": null
+  },
+  "highScore": {
+    "source": "asset-inbox/cand/jingles/jingles_NES07.ogg",
+    "startSec": 0,
+    "durSec": 0.746,
+    "sampleRate": 44100,
+    "channels": 2,
+    "loop": false,
+    "seamRatio": null
+  },
+  "ambience": {
+    "source": "asset-inbox/bsb/dock-gare-du-nord-paris-s0647.ogg",
+    "startSec": 30,
+    "durSec": 22,
+    "sampleRate": 22050,
+    "channels": 1,
+    "loop": true,
+    "seamRatio": 0.23
+  },
+  "music": {
+    "source": "asset-inbox/music/keep_your_dream_alive.ogg",
+    "startSec": 0.00109,
+    "durSec": 63.421,
+    "sampleRate": 32000,
+    "channels": 2,
+    "loop": true,
+    "seamRatio": 0.39
+  }
+}

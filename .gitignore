@@ -1,0 +1,28 @@
+# Dependencies/builds/operator configuration
+node_modules/
+dist/
+.vercel/
+.env
+.env.*
+!.env.example
+*.log
+*.tsbuildinfo
+.DS_Store
+
+# Private working downloads, raw packs and generated testing/capture outputs
+artifacts/
+asset-inbox/
+metro-rush-assets/
+
+# Keys never belong in source
+*.pem
+*.key
+
+# Unused copies from earlier art iterations stay local; current MANIFEST is audited.
+public/assets/audio/
+public/assets/city/
+public/assets/trains/
+public/assets/b/audio/
+public/assets/b/city/
+public/assets/b/men/
+**/*.orig.png

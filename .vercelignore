@@ -1,0 +1,32 @@
+# Build only this independent game; never upload private downloads/captures.
+/*
+!package.json
+!package-lock.json
+!index.html
+!vite.config.ts
+!tsconfig.json
+!vercel.json
+!src/
+!public/
+!scripts/
+!THIRD_PARTY.md
+
+.git/
+.vercel/
+node_modules/
+dist/
+artifacts/
+asset-inbox/
+metro-rush-assets/
+qa/
+.env*
+**/.DS_Store
+**/*.orig.png
+
+# Obsolete runtime copies from earlier iterations are not used by MANIFEST.
+public/assets/audio/
+public/assets/city/
+public/assets/trains/
+public/assets/b/audio/
+public/assets/b/city/
+public/assets/b/men/

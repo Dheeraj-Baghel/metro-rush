@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<!-- Dev-only clip preview: loads the runner body + UAL clip libraries, plays a
+     named clip on the actual skinned mesh, and exposes a measurement API for
+     foot height, root drift and bone-binding coverage. Served by
+     qa/preview-runner.mjs (not part of the game build). -->
+<head><style>html,body{margin:0;background:#9cc9e8}canvas{display:block}</style>
+<script type="importmap">{"imports":{"three":"/node_modules/three/build/three.module.js","three/addons/":"/node_modules/three/examples/jsm/"}}</script>
+</head>
+<body>
+<script type="module">
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
+renderer.setSize(480, 640);
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+document.body.appendChild(renderer.domElement);
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x9cc9e8);
+scene.add(new THREE.HemisphereLight(0xffffff, 0x886644, 1.4));
+const sun = new THREE.DirectionalLight(0xffffff, 2.2); sun.position.set(3, 6, 4); scene.add(sun);
+const grid = new THREE.GridHelper(6, 12, 0x335577, 0x557799); scene.add(grid);
+const cam = new THREE.PerspectiveCamera(35, 480 / 640, 0.1, 100);
+const L = new GLTFLoader();
+const [body, anims] = await Promise.all([
+  L.loadAsync('/public/assets/c/runner/runner.glb'),
+  L.loadAsync('/public/assets/c/runner/runner-anims.glb'),
+]);
+const root = body.scene; scene.add(root);
+const clips = anims.animations;
+const mixer = new THREE.AnimationMixer(root);
+const bones = {}; root.traverse((o) => { if (o.isBone) bones[o.name] = o; });
+let action = null;
+const v = new THREE.Vector3();
+window.api = {
+  clipNames: () => clips.map((c) => `${c.name}:${c.duration.toFixed(2)}`),
+  // how many of the clip's tracks resolve to a node on this body
+  coverage(name) {
+    const c = THREE.AnimationClip.findByName(clips, name);
+    let ok = 0; const miss = [];
+    for (const t of c.tracks) { const n = t.name.split('.')[0]; if (root.getObjectByName(n)) ok++; else miss.push(n); }
+    return { tracks: c.tracks.length, bound: ok, missing: [...new Set(miss)].slice(0, 5) };
+  },
+  // sample a clip: foot heights, pelvis drift, head height over time
+  sample(name, n = 24) {
+    const c = THREE.AnimationClip.findByName(clips, name);
+    mixer.stopAllAction(); action = mixer.clipAction(c); action.reset().play();
+    const out = [];
+    for (let i = 0; i <= n; i++) {
+      mixer.setTime((c.duration * i) / n);
+      root.updateMatrixWorld(true);
+      const g = (b) => bones[b].getWorldPosition(v).toArray().map((x) => +x.toFixed(3));
+      out.push({ t: +((c.duration * i) / n).toFixed(3), footL: g('foot_l'), footR: g('foot_r'), ballL: g('ball_l'), ballR: g('ball_r'), pelvis: g('pelvis'), head: g('Head') });
+    }
+    return out;
+  },
+  pose(name, t, az = 35) {
+    const c = THREE.AnimationClip.findByName(clips, name);
+    mixer.stopAllAction(); action = mixer.clipAction(c); action.reset().play();
+    mixer.setTime(t);
+    root.updateMatrixWorld(true);
+    const p = bones.pelvis.getWorldPosition(new THREE.Vector3());
+    const a = THREE.MathUtils.degToRad(az);
+    cam.position.set(p.x + Math.sin(a) * 4.2, 1.3, p.z + Math.cos(a) * 4.2);
+    cam.lookAt(p.x, 0.9, p.z);
+    renderer.render(scene, cam);
+    return true;
+  },
+};
+window.ready = true;
+</script>
+</body>
+</html>

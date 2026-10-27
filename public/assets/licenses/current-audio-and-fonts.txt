@@ -1,0 +1,22 @@
+METRO RUSH additional current-runtime provenance
+
+BigSoundBank / Joseph Sardin: CC0/public domain source records
+https://bigsoundbank.com/passage-of-a-train-6-s3416.html
+https://bigsoundbank.com/train-horn-2-s2846.html
+https://bigsoundbank.com/whoosh-3-s1795.html
+https://bigsoundbank.com/dock-gare-du-nord-paris-s0647.html
+
+Music: Keep your dream alive! (seamless loop), congusbongus
+License: CC0 / public domain
+https://opengameart.org/content/keep-your-dream-alive-seamless-loop
+
+Kenney Future / Kenney Future Narrow fonts
+License: CC0 / public domain
+https://kenney.nl/assets/kenney-fonts
+
+CC0 1.0 Universal: https://creativecommons.org/publicdomain/zero/1.0/
+
+Audio has been trimmed, leveled, resampled and/or crossfaded for game use.
+See assets/c/audio/audio-sources.json for source-region metadata and the
+project THIRD_PARTY.md for a complete runtime source summary. No attribution
+is required by CC0; these credits are retained for transparency.
