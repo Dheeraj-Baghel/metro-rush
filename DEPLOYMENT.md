@@ -7,6 +7,7 @@ the production game is public. No sibling project is included.
 ## Dedicated project
 
 - GitHub: https://github.com/Dheeraj-Baghel/metro-rush
+- **Live game: https://metro-rush-softtech10.vercel.app**
 - Vercel team: `softtech10`, existing Hobby account (personal/non-commercial use;
   no paid upgrade or new service purchased).
 - Project name: `metro-rush`; Node **24.x**, framework Vite.
@@ -78,5 +79,34 @@ Neither is a claim of human completion or a performance SLA.
 - Credential-pattern scan of publishable text found no matches.
 - Clean temporary Linux/x64 `npm ci` dry-run passed without lockfile repair.
 - Existing single-bundle >500 kB advisory remains; no dependency/chunk rewrite.
-- Full native local QA and hosted deployment checks are in progress and will be
-  recorded after completion. No physical-device or audible-quality claim.
+- Git-triggered Vercel Linux clean installation, 64-asset audit, all 118 units,
+  strict TypeScript and build succeeded; initial deployment
+  `dpl_3HpFuGoScmJnXvSqRu9fKGCfQThW` / source `e44b2ce` is Ready.
+- **55/55 native local browser checks passed** in one complete run: loading/
+  retry/cache reuse, real skeleton/animation, controls, roof/ramp/max-speed
+  collision cases, all four power-ups, positional warning/audio graph cleanup,
+  repeated restarts, saved preferences/best, recycling/resource stability and
+  phone-sized swipe controls. Optional five-minute endurance was not run.
+- **9/9 hosted workflow groups passed** on anonymous public HTTPS: real WebGL
+  startup/menu; security headers; SHA-256 equality of all 64 runtime files and
+  both compiled entry assets with correct GLB/WAV MIME; debug blocking and
+  source/inbox/secret/capture 404s; help/settings/native-save reload; countdown/
+  real score advancement/keyboard/pause/resume/restart; return to menu; fresh
+  phone-sized real tap-launch/swipe/pause and no overflow; and no console/page
+  errors, failed GET/HTTP requests or missing game assets.
+- Desktop menu and phone paused-game screenshots were visually inspected.
+  Captures/results stay local under `artifacts/testing/vercel/`.
+- The first hosted QA assertion miscounted Chromium's `net::ERR_ABORTED` events
+  for successful, bodyless HEAD size probes as missing assets. The test now
+  records only HEAD probes with observed HTTP 200 and a known manifest URL
+  separately; failed GETs and HTTP errors are not exempted. Full byte equality
+  and successful game startup prove the actual downloads. The final complete
+  hosted run passed. No game behavior was weakened to make this assertion pass.
+- A local combined smoke/clean-clone shell command hit its host time limit after
+  completing the hosted suite; the extra local clean-clone build is not claimed.
+  The actual remote Git-triggered Linux clean install/build succeeded.
+
+Repeat the real hosted smoke with `node qa/hosted.mjs`. It uses normal public UI
+only, not engine state injection. Initial downloads include ~16 MB of models and
+audio; cold load depends on connection/device. No physical-device, human audio
+quality or every-browser claim is made.

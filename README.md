@@ -4,9 +4,14 @@
 
 ## GitHub / Vercel release
 
-Publication is being prepared in the user's dedicated
-[private GitHub repository](https://github.com/Dheeraj-Baghel/metro-rush), with
-public Vercel hosting and automatic `main` updates. See
+**[Play METRO RUSH](https://metro-rush-softtech10.vercel.app)** — live on the user's
+Vercel Hobby account, with a dedicated
+[private GitHub repository](https://github.com/Dheeraj-Baghel/metro-rush).
+Future pushes to `main` automatically deploy. Node 24 and cloud asset/unit/type/
+build gates are configured. **118 units, 55 local browser checks and 9 hosted
+workflow groups pass**, including real public play/pause/restart, preference
+persistence and phone-sized tap/swipe play. All 64 runtime assets match local
+production bytes. No keys, backend or paid upgrade was added. See
 [deployment and safe updates](DEPLOYMENT.md).
 
 **Current runtime:** real Quaternius skinned runner/animation clips, Kenney
